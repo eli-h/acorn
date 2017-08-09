@@ -13,14 +13,7 @@
 // 	})
 // })
 
-
-function escape(str) {
-  var div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-}
-
-var data = [
+> let tweets = [
   {
     "user": {
       "name": "Newton",
@@ -46,7 +39,7 @@ var data = [
       },
       "handle": "@rd" },
     "content": {
-      "text": "<script>alert('uh oh!');</script>"
+      "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
   },
@@ -65,7 +58,9 @@ var data = [
     },
     "created_at": 1461113796368
   }
-];
+]
+db.tweets.insert(tweets);
+
 
 function createTweetElement(tweet) {
 
@@ -91,24 +86,52 @@ function createTweetElement(tweet) {
 	</article>`
 }
 
+const compose = function() {
+	$('.compose').on('click', function(){
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		$('textarea').focus();
+	});
+}
+
+const renderTweets = (data) => {
+	const articles = data.map(createTweetElement)
+	const html = articles.reverse().join('')
+  $('#tweets-container').html(html)
+};
+
+const loadTweets = () => {
+	$.get('/tweets', function(data){
+		renderTweets(data);
+	});
+};
+
+const postTweet = function() {$('form').on('submit', function(event){
+	event.preventDefault();
+	if ($(".counter").text() < 0){
+		alert('too long')
+	} else if ($(".counter").text() == 140){
+    	alert('cant submit nothing')
+  } else {
+		$.ajax({
+			method: 'POST',
+			url: '/tweets',
+			data: $(this).serialize(),
+			complete: loadTweets()
+		})
+	}
+})
+};
+
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(function(){
-
-	$('form').on('submit', function(event){
-		event.preventDefault();
-		console.log($(this).serialize());
-		debugger;
-  });
-
-	const renderTweets = (data) => {
-		const articles = data.map(createTweetElement)
-		const html = articles.join('')
-	  $('#tweets-container').html(html)
-			// tweetsElm.append(createTweetElement(tweet));
-		}
-
-  renderTweets(data);
-
-// let $tweet = createTweetElement(tweetData);
-// console.log($tweet)
-// $('#tweets-container').append($tweet);
+  postTweet();
+  loadTweets();
+  compose();
 });
+  
+

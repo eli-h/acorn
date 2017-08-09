@@ -6,7 +6,7 @@
     border-width: 1px;
     border-radius: 6px;
     opacity: 0.85;
-    transition: 0.4s ease-out
+    transition: 0.2s ease-out
 }
 .profilepic {
   width: 50px;
@@ -31,10 +31,9 @@
 }
 .handle {
   font-size: 15px;
-  padding-left: 80px;
   margin: 0;
   display: inline-block;
-  text-align: right; 
+  float: right; 
 }
 
 .tweet-text{
@@ -57,13 +56,9 @@
   display: inline-block;
   float: right;
   opacity: 0;
-  transition: 0.4s ease-out;
+  transition: 0.2s ease-out;
 }
 
-/*.heartpic {
-  width: 17px;
-  height: 17px;
-}*/
 .retweetpic,
 .flagpic,
 .heartpic
@@ -71,17 +66,13 @@
   width: 17px;
   height: 17px;
 }
-/*.flagpic {
-  width: 17px;
-  height: 17px;
-}*/
 
 .tweet:hover{
   border: 1px solid #a8a8a8;
   opacity: 1;
-  transition: 0.4s ease-out;
+  transition: 0.2s ease-out;
 }
 .tweet:hover .footerpics {
   opacity: 1;
-  transition: all 0.4s ease-out;
+  transition: all 0.2s ease-out;
 }

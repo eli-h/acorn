@@ -20,3 +20,20 @@
   padding-left: 10px;
   font-size: 200%;
 }
+
+.compose-div {
+	padding: 15px;
+}
+
+.compose {
+	background-color: white;
+	float: right;
+	padding: 10px;
+	border-radius: 6px;
+	transition: 0.1s ease-out;
+}
+
+.compose:hover {
+	background-color: #00a087;
+	transition: 0.1s ease-out;
+}
