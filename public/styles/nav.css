@@ -6,6 +6,7 @@
 	height: 80px;
 	padding: 0 2em;
 	text-align: center;
+	z-index: 1;
 }
 
 .logo {

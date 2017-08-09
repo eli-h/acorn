@@ -25,3 +25,6 @@ textarea {
 	width: 100%;
 	padding: 5px 10px;
 }
+.overflow {
+	color: red;
+}

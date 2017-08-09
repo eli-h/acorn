@@ -1,0 +1,87 @@
+.tweet {
+    /*background-color: white;*/
+    margin: 2em;
+    border-style: solid;
+    border-color: #cecece;
+    border-width: 1px;
+    border-radius: 6px;
+    opacity: 0.85;
+    transition: 0.4s ease-out
+}
+.profilepic {
+  width: 50px;
+  height: 50px;
+  float: left;
+  border-radius: 6px;
+}
+
+.tweet header{
+  background-color: #eee;
+  padding: 10px;
+  height: 70px;
+}
+
+.username {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0;
+  margin: 0px;
+  padding: 10px;
+  display: inline-block;
+}
+.handle {
+  font-size: 15px;
+  padding-left: 80px;
+  margin: 0;
+  display: inline-block;
+  text-align: right; 
+}
+
+.tweet-text{
+  margin: 0;
+  padding: 30px 20px 30px;
+}
+
+.tweet footer{
+  font-size: 18px;
+  border-top: 1px solid #eee;
+  padding: 10px;
+}
+
+.time {
+  margin: 0;
+  display: inline-block;
+}
+
+.footerpics {
+  display: inline-block;
+  float: right;
+  opacity: 0;
+  transition: 0.4s ease-out;
+}
+
+/*.heartpic {
+  width: 17px;
+  height: 17px;
+}*/
+.retweetpic,
+.flagpic,
+.heartpic
+ {
+  width: 17px;
+  height: 17px;
+}
+/*.flagpic {
+  width: 17px;
+  height: 17px;
+}*/
+
+.tweet:hover{
+  border: 1px solid #a8a8a8;
+  opacity: 1;
+  transition: 0.4s ease-out;
+}
+.tweet:hover .footerpics {
+  opacity: 1;
+  transition: all 0.4s ease-out;
+}
