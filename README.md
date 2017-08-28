@@ -6,16 +6,16 @@ acorn is a simple, single-page Twitter clone.
 
 the new tweets container
 
-!["the new tweets container"](https://github.com/eli-h/tweetr/blob/master/docs/new-tweets.png)
+!["the new tweets container"](https://github.com/eli-h/acorn/blob/master/docs/acorn%20tweet%20container.png?raw=true)
 
 
 counter turns red when there are too many characters
 
-!["counter turns red when there are too many characters"](https://github.com/eli-h/tweetr/blob/master/docs/too-many-characters.png)
+!["counter turns red when there are too many characters"](https://github.com/eli-h/acorn/blob/master/docs/acorn%20exceed%20characters.png?raw=true)
 
 it will not allow invalid input
 
-!["it will not allow invalid input"](https://github.com/eli-h/tweetr/blob/master/docs/invalid-input.png)
+!["it will not allow invalid input"](https://github.com/eli-h/acorn/blob/master/docs/acorn%20error.png?raw=true)
 
 ## Getting Started
 
