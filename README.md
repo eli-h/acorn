@@ -1,6 +1,6 @@
-# Tweeter Project
+# acorn.
 
-Tweeter is a simple, single-page Twitter clone.
+acorn is a simple, single-page Twitter clone.
 
 ## Screenshots
 
