@@ -4,7 +4,7 @@ acorn is a simple, single-page Twitter clone.
 
 ## Screenshots
 
-the new tweets container
+the new 'tweets' container
 
 !["the new tweets container"](https://github.com/eli-h/acorn/blob/master/docs/acorn%20tweet%20container.png?raw=true)
 
