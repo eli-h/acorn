@@ -50,8 +50,9 @@ const loadTweets = () => {
 
 const postTweet = function() {$('form').on('submit', function(event){
 	event.preventDefault();
+	let error = $("<span class='error'>Hey, that's not 1-140 characters!</span>");
+	$('.error').hide();
 	if (($(".counter").text() < 0)||($(".counter").text() == 140)){
-    let error = $("<span class='error'>Hey, that's not 1-140 characters!</span>");
     $('input').after(error);
   } else {
     $('span.error').hide();
